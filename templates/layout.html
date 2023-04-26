@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/monstylo.css') }}">
+	<title>Me</title>
+</head>
+<body>
+	<nav>
+		<div class="brand">
+			<a href="/"><img src="img/profile.jpg" width="100%" alt="me" title="me"></a>
+		</div>
+		<div class="nav-buttons">
+			<ul>
+				<li><a href="/"><i class="fas fa-home"></i>Inicio</a></li>
+				<li><a href="{{url_for('about')}}"><i class="fas fa-people"></i> Acerca de mi</a></li>
+				<li><a href="{{url_for('contact')}}"><i class="fas fa-contact"></i> Contáctame</a></li>
+				<li><a href="{{url_for('exp')}}"><i class="fas fa-experience"></i> Experiencia</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	{% block content %}
+	
+	{% endblock %}
+
+</body>
+</html>
